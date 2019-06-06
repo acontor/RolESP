@@ -36,6 +36,7 @@ public class Reglas {
     }
 
     public void cargar() {
+        System.out.println("Hola");
         try {
             Preferencias preferencias = new Preferencias();
             String selectSQL = "SELECT reglas FROM rolesp.reglas";

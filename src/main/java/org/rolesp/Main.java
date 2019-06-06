@@ -22,7 +22,7 @@ public class Main {
         } catch (IOException e) {
             BotLogger.severe(LOGTAG, e);
         }
-        System.out.println("Hola");
+
         try {
             ApiContextInitializer.init();
             TelegramBotsApi telegramBotsApi = createTelegramBotsApi();

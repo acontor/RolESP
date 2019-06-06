@@ -38,6 +38,7 @@ public class Iniciar extends BotCommand {
             boolean administrador = false;
             for (int i = 0; i < Usuario.usuarios.size(); i++) {
                 if (Usuario.usuarios.get(i).getId() == user.getId() & Usuario.usuarios.get(i).getPermisos().equalsIgnoreCase("Administrador")) {
+                    System.out.println(Usuario.usuarios.get(i));
                     administrador = true;
                     break;
                 }
@@ -56,6 +57,7 @@ public class Iniciar extends BotCommand {
                     );
                     answer.setChatId(chat.getId().toString());
                     answer.setText("¿Que quieres hacer?");
+                    System.out.println(reglas);
                 } else {
                     messageBuilder.append("No existe ninguna partida.\n").append("Para crearla, utiliza el comando /crear_juego");
                     answer.setChatId(chat.getId().toString());
